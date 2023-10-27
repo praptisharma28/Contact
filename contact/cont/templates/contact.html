@@ -3,20 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="main.css">
     <script src="https://cdn.tailwindcss.com"></script>
-
+    
 </head>
 <body>
+  <!-- nav -->
+  <nav class="bg-[#373df580] relative">
+
+    <div class="absolute right-5 top-3 flex space-x-4">
+        <span class="group">Language: <a href="">En</a> <span class="cursor-pointer">|</span> <a href="">Pb</a></span>
+        <a href="https://www.google.com/maps"><img src="Contact/contact/cont/static/assets/icons/map.png" width="30px" alt=""
+            class=" "></a>
+    </div>
+
+    <div class="relative w-[1080px] mx-auto flex items-center justify-between">
+
+        <a href="/" class="cursor-pointer py-7 pr-7">
+            <div class="">
+                <img src="Contact/contact/cont/static/assets/logo-removebg-preview.png" width="" alt="" class="h-[90px] w-[90px]">
+            </div>
+        </a>
+        <ul class="flex gap-12">
+            <li
+                class="hover:text-[rgba(55,60,245,1)] text-white text-xl font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all duration-200 relative group  ">
+                <a href="/">Home</a>
+                <div class="absolute h-1 w-full bottom-0 bg-[rgba(55,60,245,1)] hidden group-hover:block"></div>
+            </li>
+            <li
+                class="hover:text-[rgba(55,60,245,1)] text-white text-xl font-mullish py-7 text-lightBlue cursor-pointer transition-all duration-200 relative group ">
+                <a href="./contact.html">Contact</a>
+                <div class="absolute h-1 w-full bottom-0 bg-[rgba(55,60,245,1)] "></div>
+            </li>
+            <li
+                class="hover:text-[rgba(55,60,245,1)] text-white text-xl font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all duration-200 relative group ">
+                <a href="./jobForm.html">Job Form</a>
+                <div class="absolute h-1 w-full bottom-0 bg-[rgba(55,60,245,1)] hidden group-hover:block"></div>
+            </li>
+            <li
+                class="hover:text-[rgba(55,60,245,1)] text-white text-xl font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all duration-200 relative group ">
+                <a href="./aboutUs.html">About us</a>
+                <div class="absolute h-1 w-full bottom-0 bg-[rgba(55,60,245,1)] hidden group-hover:block"></div>
+            </li>
+        </ul>
+
+        <div class="flex gap-6">
+            <button
+                class="py-3 px-4 bg-[rgba(55,60,245,1)] bg-gradient-to-tr from-[rgba(55,60,245,1)] to-[rgba(178,44,255,0.9)]  text-white border-lightBlue border rounded  font-mullish text-sm font-bold transition-all duration-200 hover:scale-150 group "><a href="./login.html">Log In</a></button>
+            <button
+                class="py-3 px-4 font-mullish text-sm font-bold text-white  bg-gradient-to-tr from-[rgba(55,60,245,1)] to-[rgba(178,44,255,0.9)] text-lightBlue p-2 rounded border transition-all duration-200 hover:scale-150"><a href="./register.html">Sign
+                    Up
+</a>
+            </button>
+        </div>
+
+    </div>
+</nav>
   <br>
-  <div class="contact-container">
+
+  <!-- form -->
+  <div class="mb-10 contact-container hover:shadow-xl hover:shadow-[rgba(55,60,245,1)]">
     <h1>Contact Us</h1>
     <div class="contact-form">
-        <form action="/contact/" method="post">
-            {% csrf_token %}
+        <form action="/contact/" method="post" class="text-black ">
             <div class="form-group">
-                <label for="fname">First Name:</label>
+                <label class="" for="fname ">First Name:</label>
                 <input type="text" id="fname" name="fname" placeholder="Please enter first name"  required>
             </div>
             <div class="form-group">
@@ -37,8 +89,46 @@
         </form>
     </div>
 </div>
-  
-      <style>
+<br><br>
+<!-- footer -->
+<footer class="bg-[#373df580] w-full relative justify-center items-center mt-7 mb-0 min-h-[200px]">
+  <div class="w-11/12 mx-auto relative justify-center flex text-white space-x-8 mt-7 mb-7">
+      <div class="flex h-[20px] mt-5 mx-4">
+          <img src="Contact/contact/cont/static/assets/logo/glass2.png" width="20px" height="20px" class="" alt="">
+          <span>Career Information</span>
+      </div>
+      <div class="flex h-[20px] mt-5 mx-4">
+          <img src="Contact/contact/cont/static/assets/logo/icon-feedback.png" width="20px" height="20px" class="" alt="">
+          <span>Give Feedback</span>
+      </div>
+      <div class="flex h-[20px] mt-5 mx-4 ">
+          <img src="Contact/contact/cont/static/assets/logo/icon-contact.png" width="20px" height="20px" class="" alt="">
+          <span>Contact Us</span>
+      </div>
+      <div class="flex h-[20px] mt-5 mx-4">
+          <span>Sitemap</span>
+      </div>
+      <div class="flex h-[20px] mt-5 mx-4">
+          <span>Help</span>
+      </div>
+      <div class="flex h-[20px] mt-5 mx-4">
+          <img src="Contact/contact/cont/static/assets/logo/banner8.png" width="40px" height="40px" class="" alt="">
+          
+      </div>
+  </div>
+
+  <div class="w-11/12 mx-auto relative justify-center">
+      <span class="animate-pulse text-sm mx-[25%]">Government of Punjab does not charge any money for the private job vacancies available on this portal.</span>
+  </div>
+
+  <div class="w-full flex" >
+      <div class="w-6/12 mx-auto h-1 bg-gray-600 rounded-lg mt-0 mb-7"></div>
+   </div>
+  <div class="text-center">
+      2023, All Rights Reserved by Punjab Ghar Ghar <br> Rozgar and Karobar Mission, Punjab, India <span class="font-bold text-white">PGRKAM</span>
+  </div>
+</footer>
+     <style>
         body {
           background-color: white;
           color: white;
@@ -105,11 +195,6 @@
       input[type="submit"]:hover {
           background-color: rgba(55,60,245,1);
       }
-    
-      .navbar {
-          color: black;
-      }
-       
       </style>
 </body>
 </html>
