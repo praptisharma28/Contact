@@ -1,8 +1,7 @@
-from django.contrib import admin
+# hi/urls.py
 from django.urls import path
 from . import views
 
-urlpatterns = (
-    path('admin/', admin.site.urls),
-    path('contact/', views.contact, name='contact'),
-)
+urlpatterns = [
+    path('', views.contact_form, name='contact_form'),
+]

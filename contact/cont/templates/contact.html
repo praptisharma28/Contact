@@ -14,14 +14,14 @@
 
     <div class="absolute right-5 top-3 flex space-x-4">
         <span class="group">Language: <a href="">En</a> <span class="cursor-pointer">|</span> <a href="">Pb</a></span>
-        <a href="https://www.google.com/maps"><img src="../static/assets/logo/icon-contact.png"  alt=""
+        <a href="https://www.google.com/maps"><img src="static/assets/logo/icon-contact.png"  alt=""
             class=" "></a>
     </div>
 
     <div class="relative w-[1080px] mx-auto flex items-center justify-between">
         <a href="/" class="cursor-pointer py-7 pr-7">
             <div class="">
-                <img src="../static/assets/logo/logo-removebg-preview (1).png" width="" alt="" class="h-[90px] w-[90px]">
+                <img src="static/assets/logo/logo-removebg-preview (1).png" width="" alt="" class="h-[90px] w-[90px]">
             </div>
         </a>
         <ul class="flex gap-12">
@@ -60,34 +60,23 @@
     </div>
 </nav>
   <br>
+  <h1>Contact Us</h1>
+    <form method="post" action="{% url 'contact_form' %}">
+        {% csrf_token %}
+        <label for="first_name" style="color: black;">First Name:</label>
+        <input type="text" style="width: 500px;" name="first_name" required><br>
 
-  <!-- form -->
-  <div class="mb-10 contact-container hover:shadow-xl hover:shadow-[rgba(55,60,245,1)]">
-    <h1>Contact Us</h1>
-    <div class="contact-form">
-        <form action="/contact/" method="post" class="text-black ">
-            <div class="form-group">
-                <label class="" for="fname ">First Name:</label>
-                <input type="text" id="fname" name="fname" placeholder="Please enter first name"  required>
-            </div>
-            <div class="form-group">
-              <label for="lname">Last Name:</label>
-              <input type="text" id="lname" name="lname" placeholder="Please enter last name"  required>
-          </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your mail id"  required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Write your query." required></textarea>
-            </div>
-            <center><div class="form-group">
-                <input type="submit" value="Submit">
-            </div></center>
-        </form>
-    </div>
-</div>
+        <label for="last_name" style="color: black;">Last Name:</label>
+        <input type="text" style="width: 500px;" name="last_name" required><br>
+
+        <label for="email" style="color: black;">Email:</label>
+        <input type="email" style="width: 500px;" name="email" required><br>
+
+        <label for="message" style="color: black;">Message:</label>
+        <textarea name="message" style="width: 500px;" required></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
 <br><br>
 <!-- footer -->
 <footer class="bg-[#373df580] w-full relative justify-center items-center mt-7 mb-0 min-h-[200px]">

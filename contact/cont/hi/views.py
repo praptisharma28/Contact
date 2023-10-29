@@ -1,16 +1,16 @@
+# hi/views.py
 from django.shortcuts import render
-from hi.models import Contact
+from .models import ContactForm
 
-def contact(request):
-    if request.method=="POST":
-        print(request)
-        fname = request.POST['fname']
-        lname = request.POST['lname']
+def contact_form(request):
+    if request.method == 'POST':
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
         email = request.POST['email']
-        # contact = request.POST['contact']
         message = request.POST['message']
-        print(fname, lname, email, message)
-        contact=Contact(fname=fname,lname=lname,email=email,message=message)
-        contact.save()
-        
-    return render(request,'contact.html')
+
+        # Save the form data to the database
+        contact_entry = ContactForm(first_name=first_name, last_name=last_name, email=email, message=message)
+        contact_entry.save()
+
+    return render(request, 'contact.html')
