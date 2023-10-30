@@ -14,7 +14,7 @@
 
     <div class="absolute right-5 top-3 flex space-x-4">
         <span class="group">Language: <a href="">En</a> <span class="cursor-pointer">|</span> <a href="">Pb</a></span>
-        <a href="https://www.google.com/maps"><img src="static/assets/logo/icon-contact.png"  alt=""
+        <a href="https://www.google.com/maps"><img src="static\assets\logo\icon-contact.png"  alt=""
             class=" "></a>
     </div>
 
@@ -64,16 +64,16 @@
     <form method="post" action="{% url 'contact_form' %}">
         {% csrf_token %}
         <label for="first_name" style="color: black;">First Name:</label>
-        <input type="text" style="width: 500px;" name="first_name" required><br>
+        <input type="text" style="width: 600px;" name="first_name" required><br>
 
         <label for="last_name" style="color: black;">Last Name:</label>
-        <input type="text" style="width: 500px;" name="last_name" required><br>
+        <input type="text" style="width: 600px;" name="last_name" required><br>
 
         <label for="email" style="color: black;">Email:</label>
-        <input type="email" style="width: 500px;" name="email" required><br>
+        <input type="email" style="width: 600px;" name="email" required><br>
 
         <label for="message" style="color: black;">Message:</label>
-        <textarea name="message" style="width: 500px;" required></textarea><br>
+        <textarea name="message" style="width: 600px;" required></textarea><br>
 
         <input type="submit" value="Submit">
     </form>
